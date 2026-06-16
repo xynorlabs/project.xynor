@@ -1,0 +1,388 @@
+
+
+## 🔹 1. `index.html`
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Xynor Labs — AI/ML Projects & Solutions</title>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <!-- 3D Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
+  
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-text">Xynor Labs </div>
+    <div class="loader-bar"><div class="loader-progress"></div></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-icon">⬡</span> Xynor Labs
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="cta-btn">Get Started</a>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="badge">⚡ Next-Gen AI Solutions</div>
+      <h1 class="glitch" data-text="Build the Future with AI">Build the Future with AI</h1>
+      <p class="hero-sub">Premium AI/ML projects for B.Tech students & cutting-edge AI solutions for organizations. From concept to deployment — we build it all.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">Explore Projects →</a>
+        <a href="#contact" class="btn-secondary">Request Custom</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><h3>8+</h3><p>Projects Delivered</p></div>
+        <div class="stat"><h3>22+</h3><p>Happy Students</p></div>
+        <div class="stat"><h3>1+</h3><p>Organizations</p></div>
+        <div class="stat"><h3>4.9★</h3><p>Rating</p></div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="mouse"><div class="wheel"></div></div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="section-title">
+      <span class="subtitle">// What We Offer</span>
+      <h2>Our <span class="gradient-text">Services</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-tilt>
+        <div class="card-icon">🎓</div>
+        <h3>For Students</h3>
+        <p>Final year AI/ML projects with complete documentation, source code, and viva support.</p>
+        <ul>
+          <li>✔ Ready-made projects</li>
+          <li>✔ Custom projects</li>
+          <li>✔ Plagiarism free</li>
+          <li>✔ 24/7 support</li>
+        </ul>
+      </div>
+      <div class="service-card featured" data-tilt>
+        <div class="card-icon">🏢</div>
+        <h3>For Organizations</h3>
+        <p>End-to-end AI/ML solutions tailored to your business needs with deployment support.</p>
+        <ul>
+          <li>✔ Custom AI models</li>
+          <li>✔ Data analytics</li>
+          <li>✔ Cloud deployment</li>
+          <li>✔ Ongoing support</li>
+        </ul>
+      </div>
+      <div class="service-card" data-tilt>
+        <div class="card-icon">💡</div>
+        <h3>Mentorship</h3>
+        <p>One-on-one guidance from AI experts to help you understand and present your project.</p>
+        <ul>
+          <li>✔ Live sessions</li>
+          <li>✔ Code walkthrough</li>
+          <li>✔ Viva preparation</li>
+          <li>✔ Career guidance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="section-title">
+      <span class="subtitle">// Our Work</span>
+      <h2>Featured <span class="gradient-text">Projects</span></h2>
+    </div>
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn" data-filter="dl">Deep Learning</button>
+      <button class="filter-btn" data-filter="cv">Computer Vision</button>
+      <button class="filter-btn" data-filter="nlp">NLP</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-category="ml">
+        <div class="project-image" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+          <div class="project-overlay">View Details</div>
+          <span class="project-tag">ML</span>
+        </div>
+        <div class="project-info">
+          <h3>Stock Price Predictor</h3>
+          <p>LSTM-based predictive model for stock market analysis with 95% accuracy.</p>
+          <div class="project-tech">
+            <span>Python</span><span>TensorFlow</span><span>Pandas</span>
+          </div>
+          <div class="project-footer">
+            <span class="price">₹3,499</span>
+            <button class="buy-btn">Get Project</button>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="cv">
+        <div class="project-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+          <div class="project-overlay">View Details</div>
+          <span class="project-tag">CV</span>
+        </div>
+        <div class="project-info">
+          <h3>Face Recognition System</h3>
+          <p>Real-time face detection and recognition using OpenCV and DeepFace.</p>
+          <div class="project-tech">
+            <span>OpenCV</span><span>Python</span><span>Flask</span>
+          </div>
+          <div class="project-footer">
+            <span class="price">₹4,999</span>
+            <button class="buy-btn">Get Project</button>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="nlp">
+        <div class="project-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+          <div class="project-overlay">View Details</div>
+          <span class="project-tag">NLP</span>
+        </div>
+        <div class="project-info">
+          <h3>AI Chatbot</h3>
+          <p>Intelligent chatbot with sentiment analysis using BERT and transformers.</p>
+          <div class="project-tech">
+            <span>NLTK</span><span>BERT</span><span>Flask</span>
+          </div>
+          <div class="project-footer">
+            <span class="price">₹5,499</span>
+            <button class="buy-btn">Get Project</button>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="dl">
+        <div class="project-image" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+          <div class="project-overlay">View Details</div>
+          <span class="project-tag">DL</span>
+        </div>
+        <div class="project-info">
+          <h3>Disease Prediction System</h3>
+          <p>Deep learning model for predicting diseases from symptoms and medical data.</p>
+          <div class="project-tech">
+            <span>Keras</span><span>Scikit-learn</span><span>Django</span>
+          </div>
+          <div class="project-footer">
+            <span class="price">₹6,999</span>
+            <button class="buy-btn">Get Project</button>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="ml">
+        <div class="project-image" style="background: linear-gradient(135deg, #30cfd0, #330867);">
+          <div class="project-overlay">View Details</div>
+          <span class="project-tag">ML</span>
+        </div>
+        <div class="project-info">
+          <h3>Credit Card Fraud Detection</h3>
+          <p>ML model to detect fraudulent transactions with high precision and recall.</p>
+          <div class="project-tech">
+            <span>Scikit-learn</span><span>XGBoost</span><span>Streamlit</span>
+          </div>
+          <div class="project-footer">
+            <span class="price">₹3,999</span>
+            <button class="buy-btn">Get Project</button>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" data-category="cv">
+        <div class="project-image" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+          <div class="project-overlay">View Details</div>
+          <span class="project-tag">CV</span>
+        </div>
+        <div class="project-info">
+          <h3>Driver Drowsiness Detection</h3>
+          <p>Real-time system to detect driver fatigue and alert using computer vision.</p>
+          <div class="project-tech">
+            <span>OpenCV</span><span>Dlib</span><span>TensorFlow</span>
+          </div>
+          <div class="project-footer">
+            <span class="price">₹5,999</span>
+            <button class="buy-btn">Get Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <div class="section-title">
+      <span class="subtitle">// Pricing Plans</span>
+      <h2>Choose Your <span class="gradient-text">Plan</span></h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card" data-tilt>
+        <h3>Starter</h3>
+        <div class="price">₹2,499<span>/project</span></div>
+        <ul>
+          <li>✔ Basic project code</li>
+          <li>✔ Documentation</li>
+          <li>✔ Email support</li>
+          <li>✔ 7-day delivery</li>
+        </ul>
+        <a href="#contact" class="btn-primary">Choose Plan</a>
+      </div>
+      <div class="price-card featured" data-tilt>
+        <div class="popular">MOST POPULAR</div>
+        <h3>Professional</h3>
+        <div class="price">₹4,999<span>/project</span></div>
+        <ul>
+          <li>✔ Advanced project</li>
+          <li>✔ Full documentation</li>
+          <li>✔ Viva preparation</li>
+          <li>✔ 1-on-1 mentorship</li>
+          <li>✔ Source code walkthrough</li>
+          <li>✔ Lifetime access</li>
+        </ul>
+        <a href="#contact" class="btn-primary">Choose Plan</a>
+      </div>
+      <div class="price-card" data-tilt>
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <ul>
+          <li>✔ Custom AI solutions</li>
+          <li>✔ Dedicated team</li>
+          <li>✔ Deployment support</li>
+          <li>✔ Ongoing maintenance</li>
+          <li>✔ NDA & IP rights</li>
+        </ul>
+        <a href="#contact" class="btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="section-title">
+      <span class="subtitle">// Get In Touch</span>
+      <h2>Let's <span class="gradient-text">Connect</span></h2>
+    </div>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Ready to start your project?</h3>
+        <p>Drop us a message and we'll get back to you within 24 hours.</p>
+        <div class="info-item">
+          <span>📧</span>
+          <div>
+            <h4>Email</h4>
+            <p>xynorlabs@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span>📱</span>
+          <div>
+            <h4>Phone</h4>
+            <p>+91 8411858286</p>
+            <p>+91 8379832095</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span>📍</span>
+          <div>
+            <h4>Location</h4>
+            <p>Pune, India</p>
+          </div>
+        </div>
+      </div>
+<form class="contact-form" id="contactForm">
+  <input type="text" id="name" placeholder="Your Name" required />
+
+  <input type="text" id="phone" placeholder="Phone Number" required>
+  
+  <input type="email" id="email" placeholder="Your Email" required />
+  
+  <input type="text" id="subject" placeholder="Subject" required />
+  
+  <select id="category">
+    <option>I'm a Student</option>
+    <option>I'm an Organization</option>
+    <option>Other</option>
+  </select>
+
+  <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+
+  <button type="submit" class="btn-primary">
+    Send Message →
+  </button>
+</form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><span class="logo-icon">⬡</span> Xynor Labs</h3>
+        <p>Building the future with AI, one project at a time.</p>
+        <div class="socials">
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">📷</a>
+          <a href="#">💼</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="footer-section">
+        <h4>Services</h4>
+        <a href="#">Student Projects</a>
+        <a href="#">Custom AI</a>
+        <a href="#">Mentorship</a>
+        <a href="#">Consulting</a>
+      </div>
+      <div class="footer-section">
+        <h4>Newsletter</h4>
+        <p>Subscribe for project ideas & offers</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Your email" />
+          <button>→</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Xynor Labs. All rights reserved. | Made with 💜 for innovation</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
