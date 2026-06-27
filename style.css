@@ -148,6 +148,18 @@ body {
   box-shadow: 0 10px 30px rgba(0,240,255,0.4);
 }
 .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+/* Logo Image */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
 
 /* ============= HERO ============= */
 .hero {
@@ -345,6 +357,7 @@ section { padding: 100px 5%; position: relative; }
   color: var(--text-dim);
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+
 
 /* ============= PROJECTS ============= */
 .filter-buttons {

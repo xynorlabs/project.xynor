@@ -201,3 +201,22 @@ if (form) {
     }
   });
 }
+/* ============= SERVICE CARDS CLICK TO CONTACT ============= */
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceCards = document.querySelectorAll(".service-card");
+
+  serviceCards.forEach(card => {
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", () => {
+      const contactSection = document.getElementById("contact");
+
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+});
